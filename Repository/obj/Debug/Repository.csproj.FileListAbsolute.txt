@@ -1,0 +1,13 @@
+D:\git\down2\knowledge\Repository\bin\Debug\Repository.dll
+D:\git\down2\knowledge\Repository\bin\Debug\Repository.pdb
+D:\git\down2\knowledge\Repository\bin\Debug\IRepository.dll
+D:\git\down2\knowledge\Repository\bin\Debug\KnowledgeModel.dll
+D:\git\down2\knowledge\Repository\bin\Debug\IRepository.pdb
+D:\git\down2\knowledge\Repository\bin\Debug\KnowledgeModel.pdb
+D:\git\down2\knowledge\Repository\obj\Debug\Repository.csprojAssemblyReference.cache
+D:\git\down2\knowledge\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
+D:\git\down2\knowledge\Repository\obj\Debug\Repository.csproj.CopyComplete
+D:\git\down2\knowledge\Repository\obj\Debug\Repository.dll
+D:\git\down2\knowledge\Repository\obj\Debug\Repository.pdb
+D:\git\down2\knowledge\Repository\bin\Debug\BestWoDP.dll
+D:\git\down2\knowledge\Repository\bin\Debug\Dapper.dll

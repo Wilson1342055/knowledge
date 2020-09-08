@@ -498,10 +498,28 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Knowledge.Controllers.FloorController.AddFloor(KnowledgeModel.Floor.FloorModel)">
+            <summary>
+            新增楼层
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:Knowledge.Controllers.RoomController.AddRoom(KnowledgeModel.Room.RoomModel)">
+            <summary>
+            新增楼层
+            </summary>
+            <param name="model"></param>
+        </member>
         <member name="T:Knowledge.Controllers.ValuesController">
             <summary>
             test控制器
             </summary>
+        </member>
+        <member name="M:Knowledge.Controllers.ValuesController.AddFloor(KnowledgeModel.Floor.FloorModel)">
+            <summary>
+            新增楼层
+            </summary>
+            <param name="model"></param>
         </member>
         <member name="T:Knowledge.Models.Common.EnumModel">
             <summary>

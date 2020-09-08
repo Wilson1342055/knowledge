@@ -1,6 +1,10 @@
 ﻿using BestWoDP;
+using IRepository.IFloor;
 using Knowledge.Controllers.Base;
 using Knowledge.Models.Common;
+using KnowledgeModel.Common;
+using KnowledgeModel.Floor;
+using Repository.Floor;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -16,6 +20,11 @@ namespace Knowledge.Controllers
     /// </summary>
     public class ValuesController :BaseController
     {
+        private readonly IFloor _floor;
+        public ValuesController(IFloor floor)
+        {
+            _floor = floor;
+        }
         // GET api/values
         public HttpResponseMessage Get()
         {
@@ -28,10 +37,14 @@ namespace Knowledge.Controllers
             }
             return ReturnHttpResponseMessage(EnumModel.AllSuccess, listResult);
         }
-
-        // PUT api/values/5
-        public void Put(int id, [FromBody] string value)
+        /// <summary>
+        /// 新增楼层
+        /// </summary>
+        /// <param name="model"></param>
+        [HttpPost]
+        public ExecResult AddFloor(FloorModel model)
         {
+            return _floor.AddFloor(model);
         }
 
         // DELETE api/values/5

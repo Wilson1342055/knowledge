@@ -15,6 +15,8 @@ namespace Knowledge.Controllers.Base
     /// </summary>
     public class BaseController : ApiController
     {
+        public BaseController()
+        { }
         /// <summary>
         /// 封装返回数据
         /// </summary>
