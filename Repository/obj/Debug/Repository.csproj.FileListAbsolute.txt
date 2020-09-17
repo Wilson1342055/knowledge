@@ -11,3 +11,4 @@ D:\git\down2\knowledge\Repository\obj\Debug\Repository.dll
 D:\git\down2\knowledge\Repository\obj\Debug\Repository.pdb
 D:\git\down2\knowledge\Repository\bin\Debug\BestWoDP.dll
 D:\git\down2\knowledge\Repository\bin\Debug\Dapper.dll
+D:\git\down2\knowledge\Repository\bin\Debug\KnowledgeModel.xml

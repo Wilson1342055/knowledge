@@ -481,6 +481,12 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="M:Knowledge.Controllers.AnswerInfoController.AddAnswerInfo(KnowledgeModel.AnswerInfo.AnswerInfoModel)">
+            <summary>
+            新增答题
+            </summary>
+            <param name="model"></param>
+        </member>
         <member name="T:Knowledge.Controllers.Base.BaseController">
             <summary>
             控制器基类
@@ -503,6 +509,21 @@
             新增楼层
             </summary>
             <param name="model"></param>
+        </member>
+        <member name="M:Knowledge.Controllers.CarController.AddCar(KnowledgeModel.Car.CarModel)">
+            <summary>
+            增加卡牌
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Knowledge.Controllers.CarController.GetCarAnswer(System.Int32,System.Int32)">
+            <summary>
+            获取答题卡牌
+            </summary>
+            <param name="EmployeeID"></param>
+            <param name="IsRandom"></param>
+            <returns></returns>
         </member>
         <member name="M:Knowledge.Controllers.RoomController.AddRoom(KnowledgeModel.Room.RoomModel)">
             <summary>

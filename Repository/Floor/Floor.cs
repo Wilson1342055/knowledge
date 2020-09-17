@@ -52,7 +52,7 @@ namespace Repository.Floor
 
         public ExecResult QueryFloor(int EmployeeID)
         {
-            DataTable dt = DapperHelper.QueryGetDT("Floor with(nolock)","*", $"and EmployeeID={EmployeeID}", BestWoDP.DapperHelper.DBConnection.LogHelper);
+            DataTable dt = DapperHelper.QueryGetDT("Floor with(nolock)", "*,FloorName 楼层", $"and EmployeeID={EmployeeID}", BestWoDP.DapperHelper.DBConnection.LogHelper);
 
             return new ExecResult { StatusCode = 1, Message = "操作成功", DTData = dt };
         }

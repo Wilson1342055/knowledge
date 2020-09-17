@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\KnowledgeModel.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -41,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnswerInfo\AnswerInfoModel.cs" />
+    <Compile Include="Car\CarModel.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Common\ExecResult.cs" />
     <Compile Include="Common\ListResult.cs" />
@@ -48,5 +51,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Room\RoomModel.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

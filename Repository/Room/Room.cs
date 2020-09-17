@@ -60,5 +60,16 @@ namespace Repository.Room
             }
             return new ExecResult { StatusCode = 1, Message = "操作成功", DTData = dt };
         }
+
+        public ExecResult QueryRoomByFloorID(int FloorID)
+        {
+            DataTable dt = DapperHelper.QueryGetDT("Room rm with(nolock) ", "rm.RoomID,rm.RoomName ", $"and rm.FloorID={FloorID}", BestWoDP.DapperHelper.DBConnection.LogHelper);
+            if (dt.Rows.Count == 0)
+            {
+                DataRow dr = dt.NewRow();
+                dt.Rows.Add(dr);
+            }
+            return new ExecResult { StatusCode = 1, Message = "操作成功", DTData = dt };
+        }
     }
 }

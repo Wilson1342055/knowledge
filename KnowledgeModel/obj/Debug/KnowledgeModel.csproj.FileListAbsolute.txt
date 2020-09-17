@@ -4,3 +4,4 @@ D:\git\down2\knowledge\KnowledgeModel\obj\Debug\KnowledgeModel.csproj.CoreCompil
 D:\git\down2\knowledge\KnowledgeModel\obj\Debug\KnowledgeModel.dll
 D:\git\down2\knowledge\KnowledgeModel\obj\Debug\KnowledgeModel.pdb
 D:\git\down2\knowledge\KnowledgeModel\obj\Debug\KnowledgeModel.csprojAssemblyReference.cache
+D:\git\down2\knowledge\KnowledgeModel\bin\Debug\KnowledgeModel.xml

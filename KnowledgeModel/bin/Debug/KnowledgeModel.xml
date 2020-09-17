@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KnowledgeModel</name>
+    </assembly>
+    <members>
+        <member name="T:KnowledgeModel.Common.ExecResult">
+            <summary>
+            执行模式统一返回模型
+            </summary>
+        </member>
+        <member name="P:KnowledgeModel.Common.ExecResult.StatusCode">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:KnowledgeModel.Common.ExecResult.Message">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:KnowledgeModel.Common.ExecResult.Data">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="T:KnowledgeModel.Common.ExceDataResult">
+            <summary>
+            返回数据统一模型
+            </summary>
+        </member>
+        <member name="P:KnowledgeModel.Common.ExceDataResult.DocumentNo">
+            <summary>
+            单据号
+            </summary>
+        </member>
+        <member name="P:KnowledgeModel.Common.ExceDataResult.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="P:KnowledgeModel.Common.ExceDataResult.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+    </members>
+</doc>

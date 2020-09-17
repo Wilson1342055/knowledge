@@ -293,7 +293,6 @@ D:\git\down\knowledge\Knowledge\obj\Debug\Knowledge.csproj.CopyComplete
 D:\git\down\knowledge\Knowledge\obj\Debug\Knowledge.dll
 D:\git\down\knowledge\Knowledge\obj\Debug\Knowledge.pdb
 D:\git\down2\knowledge\Knowledge\bin\Knowledge.dll.config
-D:\git\down2\knowledge\Knowledge\bin\Knowledge.xml
 D:\git\down2\knowledge\Knowledge\bin\Knowledge.dll
 D:\git\down2\knowledge\Knowledge\bin\Knowledge.pdb
 D:\git\down2\knowledge\Knowledge\bin\roslyn\csc.exe
@@ -402,3 +401,5 @@ D:\git\down2\knowledge\Knowledge\bin\Autofac.Integration.WebApi.dll
 D:\git\down2\knowledge\Knowledge\bin\Autofac.xml
 D:\git\down2\knowledge\Knowledge\bin\Autofac.Integration.Mvc.xml
 D:\git\down2\knowledge\Knowledge\bin\Autofac.Integration.WebApi.xml
+D:\git\down2\knowledge\Knowledge\bin\KnowledgeModel.xml
+D:\git\down2\knowledge\Knowledge\bin\Knowledge.xml

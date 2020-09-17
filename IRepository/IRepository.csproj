@@ -47,7 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ICar\ICar.cs" />
     <Compile Include="IFloor\IFloor.cs" />
+    <Compile Include="IAnswerInfo\IAnswerInfo.cs" />
     <Compile Include="IRoom\IRoom.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

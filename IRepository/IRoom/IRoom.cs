@@ -20,5 +20,7 @@ namespace IRepository.IRoom
         ExecResult DelRoom(string IDs);
 
         ExecResult QueryRoom(int EmployeeID);
+
+        ExecResult QueryRoomByFloorID(int FloorID);
     }
 }

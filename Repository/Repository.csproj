@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnswerInfo\AnswerInfo.cs" />
+    <Compile Include="Car\Car.cs" />
     <Compile Include="Floor\Floor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Room\Room.cs" />

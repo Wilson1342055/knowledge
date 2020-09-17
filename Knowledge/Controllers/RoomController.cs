@@ -40,5 +40,12 @@ namespace Knowledge.Controllers
         {
             return _room.QueryRoom(EmployeeID);
         }
+
+        [HttpGet]
+        public ExecResult QueryRoomByFloorID(int FloorID)
+        {
+            return _room.QueryRoomByFloorID(FloorID);
+        }
+
     }
 }
