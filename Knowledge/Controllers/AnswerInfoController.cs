@@ -11,10 +11,16 @@ using System.Web.Http;
 
 namespace Knowledge.Controllers
 {
+    /// <summary>
+    /// 答题
+    /// </summary>
     public class AnswerInfoController : BaseController
     {
         private readonly IAnswerInfo _answerInfo;
-
+        /// <summary>
+        /// 答题
+        /// </summary>
+        /// <param name="answerInfo"></param>
         public AnswerInfoController(IAnswerInfo answerInfo)
         {
             _answerInfo = answerInfo;
@@ -28,17 +34,16 @@ namespace Knowledge.Controllers
         {
             return _answerInfo.AddAnswerInfo(model);
         }
-
+        /// <summary>
+        /// 修改答题
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         public ExecResult UpdateAnswerInfo(AnswerInfoModel model)
         {
             return _answerInfo.UpdateAnswerInfo(model);
         }
-
-        [HttpGet]
-        public ExecResult GetAnswerInfo(int EmployeeID)
-        {
-            return null;
-        }
+        
     }
 }

@@ -17,12 +17,12 @@ namespace Repository.AnswerInfo
         public ExecResult AddAnswerInfo(AnswerInfoModel model)
         {
             string strSql = $"insert into AnswerInfo([CarID], [AnswerContent], [AnswerResult], [EmployeeID], [CreateUser], [CreateTime]) values('{model.CarID}','{model.AnswerContent}','{model.AnswerResult}','{model.EmployeeID}','{ model.CreateUser}','{model.CreateTime}')";
-            int intResult = BestWoDP.DapperHelper.ExceSQL(strSql, BestWoDP.DapperHelper.DBConnection.LogHelper);
+            int intResult = BestWoDP.DapperHelper.ExceSQLReturnID(strSql, BestWoDP.DapperHelper.DBConnection.LogHelper);
             List<ExceDataResult> listResult = new List<ExceDataResult>();
 
             if (intResult > 0)
             {
-                listResult.Add(new ExceDataResult { DocumentNo = model.CarID.ToString(), Success = true, Remark = "操作成功" });
+                listResult.Add(new ExceDataResult { DocumentNo = intResult.ToString(), Success = true, Remark = "操作成功" });
                 return new ExecResult { StatusCode = 1, Message = "操作成功", Data = listResult };
             }
             else

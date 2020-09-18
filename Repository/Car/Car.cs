@@ -17,7 +17,7 @@ namespace Repository.Car
     {
         public ExecResult AddCar(CarModel car)
         {
-            string strSql = $"insert into Car([CarQuestion],[CarAnswer],[FloorID],[RoomID],[CreateUser],[CreateTime],[IsStop],[EmployeeID]) values('{car.CarQuestion}','{car.CarAnswer}','{car.FloorID}','{car.RoomID}','{car.CreateUser}','{car.CreateTime}',{car.IsStop},1)";
+            string strSql = $"insert into Car([CarQuestion],[CarAnswer],[FloorID],[RoomID],[CreateUser],[CreateTime],[IsStop],[EmployeeID],[Points]) values('{car.CarQuestion}','{car.CarAnswer}','{car.FloorID}','{car.RoomID}','{car.CreateUser}','{car.CreateTime}',{car.IsStop},1,{car.Points})";
             int intResult = BestWoDP.DapperHelper.ExceSQL(strSql, BestWoDP.DapperHelper.DBConnection.LogHelper);
             List<ExceDataResult> listResult = new List<ExceDataResult>();
 
@@ -66,9 +66,21 @@ namespace Repository.Car
 
         public ExecResult UpdateCar(CarModel car)
         {
-            string strSql = $"update Car set [Points]={1} where CarID = {car.FloorID}";
+            string strSql = $"update Car set [Points]={1} where CarID = {car.CarID}";
             int intResult = BestWoDP.DapperHelper.ExceSQL(strSql, BestWoDP.DapperHelper.DBConnection.LogHelper);
-            return new ExecResult { StatusCode = 1, Message = "操作成功", Data = null };
+
+            List<ExceDataResult> listResult = new List<ExceDataResult>();
+
+            if (intResult > 0)
+            {
+                listResult.Add(new ExceDataResult { DocumentNo = car.CarID.ToString(), Success = true, Remark = "操作成功" });
+                return new ExecResult { StatusCode = 1, Message = "操作成功", Data = listResult };
+            }
+            else
+            {
+                listResult.Add(new ExceDataResult { DocumentNo = "", Success = false, Remark = "操作失败" });
+                return new ExecResult { StatusCode = 1, Message = "操作失败", Data = listResult };
+            }
         }
 
         public ExecResult GetCarAnswer(int EmployeeID, int IsRandom)

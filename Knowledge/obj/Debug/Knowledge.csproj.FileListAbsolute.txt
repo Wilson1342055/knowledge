@@ -401,5 +401,4 @@ D:\git\down2\knowledge\Knowledge\bin\Autofac.Integration.WebApi.dll
 D:\git\down2\knowledge\Knowledge\bin\Autofac.xml
 D:\git\down2\knowledge\Knowledge\bin\Autofac.Integration.Mvc.xml
 D:\git\down2\knowledge\Knowledge\bin\Autofac.Integration.WebApi.xml
-D:\git\down2\knowledge\Knowledge\bin\KnowledgeModel.xml
 D:\git\down2\knowledge\Knowledge\bin\Knowledge.xml

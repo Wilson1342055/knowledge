@@ -21,5 +21,7 @@ namespace KnowledgeModel.Car
 
         public int EmployeeID { get; set; }
         public int IsStop { get; set; }
+
+        public decimal Points { get; set; }
     }
 }

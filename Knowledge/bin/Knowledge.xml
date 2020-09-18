@@ -481,11 +481,29 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="T:Knowledge.Controllers.AnswerInfoController">
+            <summary>
+            答题
+            </summary>
+        </member>
+        <member name="M:Knowledge.Controllers.AnswerInfoController.#ctor(IRepository.IAnswerInfo.IAnswerInfo)">
+            <summary>
+            答题
+            </summary>
+            <param name="answerInfo"></param>
+        </member>
         <member name="M:Knowledge.Controllers.AnswerInfoController.AddAnswerInfo(KnowledgeModel.AnswerInfo.AnswerInfoModel)">
             <summary>
             新增答题
             </summary>
             <param name="model"></param>
+        </member>
+        <member name="M:Knowledge.Controllers.AnswerInfoController.UpdateAnswerInfo(KnowledgeModel.AnswerInfo.AnswerInfoModel)">
+            <summary>
+            修改答题
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
         </member>
         <member name="T:Knowledge.Controllers.Base.BaseController">
             <summary>
@@ -510,9 +528,41 @@
             </summary>
             <param name="model"></param>
         </member>
+        <member name="T:Knowledge.Controllers.CarController">
+            <summary>
+            卡牌
+            </summary>
+        </member>
+        <member name="M:Knowledge.Controllers.CarController.#ctor(IRepository.ICar.ICar)">
+            <summary>
+            卡牌
+            </summary>
+            <param name="car"></param>
+        </member>
         <member name="M:Knowledge.Controllers.CarController.AddCar(KnowledgeModel.Car.CarModel)">
             <summary>
             增加卡牌
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Knowledge.Controllers.CarController.DelCar(System.String)">
+            <summary>
+            删除卡牌
+            </summary>
+            <param name="IDs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Knowledge.Controllers.CarController.QueryCar(System.Int32)">
+            <summary>
+            查看卡牌
+            </summary>
+            <param name="EmployeeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Knowledge.Controllers.CarController.UpdateCar(KnowledgeModel.Car.CarModel)">
+            <summary>
+            更新卡牌
             </summary>
             <param name="model"></param>
             <returns></returns>
