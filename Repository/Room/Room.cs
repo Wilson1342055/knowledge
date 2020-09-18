@@ -53,22 +53,12 @@ namespace Repository.Room
         public ExecResult QueryRoom(int EmployeeID)
         {
             DataTable dt = DapperHelper.QueryGetDT("Room rm with(nolock) join Floor fr with(nolock) on rm.FloorID = fr.FloorID", "rm.RoomID,rm.RoomName '房间名称',fr.FloorName '所在楼层',rm.RoomDesc '房间描述',rm.CreateUser '创建人',rm.CreateTime '创建时间'", $"and rm.EmployeeID={EmployeeID}", BestWoDP.DapperHelper.DBConnection.LogHelper);
-            if(dt.Rows.Count==0)
-            {
-                DataRow dr = dt.NewRow();
-                dt.Rows.Add(dr);
-            }
             return new ExecResult { StatusCode = 1, Message = "操作成功", DTData = dt };
         }
 
-        public ExecResult QueryRoomByFloorID(int FloorID)
+        public ExecResult QueryRoomByFloorID(string FloorID)
         {
-            DataTable dt = DapperHelper.QueryGetDT("Room rm with(nolock) ", "rm.RoomID,rm.RoomName ", $"and rm.FloorID={FloorID}", BestWoDP.DapperHelper.DBConnection.LogHelper);
-            if (dt.Rows.Count == 0)
-            {
-                DataRow dr = dt.NewRow();
-                dt.Rows.Add(dr);
-            }
+            DataTable dt = DapperHelper.QueryGetDT("Room rm with(nolock) ", "rm.RoomID,rm.RoomName ", $"and rm.FloorID in ({FloorID})", BestWoDP.DapperHelper.DBConnection.LogHelper);
             return new ExecResult { StatusCode = 1, Message = "操作成功", DTData = dt };
         }
     }

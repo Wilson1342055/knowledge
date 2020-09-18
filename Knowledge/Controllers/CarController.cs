@@ -77,5 +77,15 @@ namespace Knowledge.Controllers
         {
             return _car.GetCarAnswer(EmployeeID, IsRandom);
         }
+        /// <summary>
+        /// 查询房间是否有卡牌
+        /// </summary>
+        /// <param name="FloorIDs"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public ExecResult QueryCarByRoomIDs(string RoomIDs)
+        {
+            return _car.QueryCarByRoomIDs(RoomIDs);
+        }
     }
 }

@@ -575,6 +575,13 @@
             <param name="IsRandom"></param>
             <returns></returns>
         </member>
+        <member name="M:Knowledge.Controllers.CarController.QueryCarByRoomIDs(System.String)">
+            <summary>
+            查询房间是否有卡牌
+            </summary>
+            <param name="FloorIDs"></param>
+            <returns></returns>
+        </member>
         <member name="M:Knowledge.Controllers.RoomController.AddRoom(KnowledgeModel.Room.RoomModel)">
             <summary>
             新增楼层

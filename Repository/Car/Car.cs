@@ -55,18 +55,20 @@ namespace Repository.Car
         public ExecResult QueryCar(int EmployeeID)
         {
             DataTable dt = DapperHelper.QueryGetDT("Car cr with(nolock) join Floor fr with(nolock) on cr.FloorID = fr.FloorID join Room rm with(nolock) on rm.RoomID=cr.RoomID", "cr.CarID,fr.FloorName+'('+rm.RoomName+')' '楼层房间',cr.CarQuestion '牌面',cr.[CarAnswer] '答案',cr.CreateUser '创建人',cr.CreateTime '创建时间'", $"and cr.EmployeeID={EmployeeID} and cr.[IsStop]=0", BestWoDP.DapperHelper.DBConnection.LogHelper);
-            if(dt.Rows.Count==0)
-            {
-                DataRow dr = dt.NewRow();
-                dt.Rows.Add(dr);
-            }
+            return new ExecResult { StatusCode = 1, Message = "操作成功", DTData = dt };
+
+        }
+
+        public ExecResult QueryCarByRoomIDs(string RoomIDs)
+        {
+            DataTable dt = DapperHelper.QueryGetDT("Car cr with(nolock) ", "cr.CarID", $"and cr.RoomID in ({RoomIDs}) and cr.[IsStop]=0", BestWoDP.DapperHelper.DBConnection.LogHelper);
             return new ExecResult { StatusCode = 1, Message = "操作成功", DTData = dt };
 
         }
 
         public ExecResult UpdateCar(CarModel car)
         {
-            string strSql = $"update Car set [Points]={1} where CarID = {car.CarID}";
+            string strSql = $"update Car set [Points]={car.Points} where CarID = {car.CarID}";
             int intResult = BestWoDP.DapperHelper.ExceSQL(strSql, BestWoDP.DapperHelper.DBConnection.LogHelper);
 
             List<ExceDataResult> listResult = new List<ExceDataResult>();
@@ -89,16 +91,10 @@ namespace Repository.Car
             if (IsRandom == 1)
                 dt = DapperHelper.QueryGetDT("Car cr with(nolock) join Floor fr with(nolock) on cr.FloorID = fr.FloorID join Room rm with(nolock) on rm.RoomID = cr.RoomID", "top 1 cr.Points,cr.CarID,cr.[CarQuestion],cr.[CarAnswer],rm.RoomName,fr.FloorName", $"and cr.EmployeeID={EmployeeID} ORDER BY NEWID()", BestWoDP.DapperHelper.DBConnection.LogHelper);
             else
-                dt = DapperHelper.QueryGetDT("Car cr with(nolock) join Floor fr with(nolock) on cr.FloorID = fr.FloorID join Room rm with(nolock) on rm.RoomID = cr.RoomID", "cr.CarID,cr.[CarQuestion],cr.[CarAnswer],rm.RoomName,fr.FloorName", $"and cr.EmployeeID={EmployeeID} and cr.Points<1 ORDER BY NEWID()", BestWoDP.DapperHelper.DBConnection.LogHelper);
+                dt = DapperHelper.QueryGetDT("Car cr with(nolock) join Floor fr with(nolock) on cr.FloorID = fr.FloorID join Room rm with(nolock) on rm.RoomID = cr.RoomID", "top 1 cr.Points,cr.CarID,cr.[CarQuestion],cr.[CarAnswer],rm.RoomName,fr.FloorName", $"and cr.EmployeeID={EmployeeID} and cr.Points<1 ORDER BY NEWID()", BestWoDP.DapperHelper.DBConnection.LogHelper);
             if (dt.Rows.Count == 0)
             {
                 dt = DapperHelper.QueryGetDT("Car cr with(nolock) join Floor fr with(nolock) on cr.FloorID = fr.FloorID join Room rm with(nolock) on rm.RoomID = cr.RoomID", "top 1 cr.Points,cr.CarID,cr.[CarQuestion],cr.[CarAnswer],rm.RoomName,fr.FloorName", $"and cr.EmployeeID={EmployeeID} ORDER BY NEWID()", BestWoDP.DapperHelper.DBConnection.LogHelper);
-
-                if (dt.Rows.Count == 0)
-                {
-                    DataRow dr = dt.NewRow();
-                    dt.Rows.Add(dr);
-                }
             }
             return new ExecResult { StatusCode = 1, Message = "操作成功", DTData = dt };
         }

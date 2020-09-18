@@ -29,7 +29,7 @@ namespace Knowledge.Controllers
             return _room.AddRoom(model);
         }
 
-        [HttpPost]
+        [HttpGet]
         public ExecResult DelRoom(string IDs)
         {
             return _room.DelRoom(IDs);
@@ -42,10 +42,12 @@ namespace Knowledge.Controllers
         }
 
         [HttpGet]
-        public ExecResult QueryRoomByFloorID(int FloorID)
+        public ExecResult QueryRoomByFloorID(string FloorID)
         {
             return _room.QueryRoomByFloorID(FloorID);
         }
+
+
 
     }
 }

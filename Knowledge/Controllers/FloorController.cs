@@ -29,10 +29,10 @@ namespace Knowledge.Controllers
             return _floor.AddFloor(model);
         }
 
-        [HttpPost]
-        public ExecResult DelFloor(string IDs)
+        [HttpGet]
+        public ExecResult DelFloor(string FloorID)
         {
-            return _floor.DelFloor(IDs);
+            return _floor.DelFloor(FloorID);
         }
 
         [HttpGet]
