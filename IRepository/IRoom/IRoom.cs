@@ -17,10 +17,14 @@ namespace IRepository.IRoom
         /// <returns></returns>
         ExecResult AddRoom(RoomModel floor);
 
+        ExecResult UpdateRoom(RoomModel floor);
+
         ExecResult DelRoom(string IDs);
 
         ExecResult QueryRoom(int EmployeeID);
 
         ExecResult QueryRoomByFloorID(string FloorID);
+
+        ExecResult QueryRoomByID(int RoomID);
     }
 }

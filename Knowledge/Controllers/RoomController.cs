@@ -29,6 +29,13 @@ namespace Knowledge.Controllers
             return _room.AddRoom(model);
         }
 
+        [HttpPost]
+        public ExecResult UpdateRoom(RoomModel model)
+        {
+            return _room.UpdateRoom(model);
+        }
+
+
         [HttpGet]
         public ExecResult DelRoom(string IDs)
         {
@@ -45,6 +52,12 @@ namespace Knowledge.Controllers
         public ExecResult QueryRoomByFloorID(string FloorID)
         {
             return _room.QueryRoomByFloorID(FloorID);
+        }
+
+        [HttpGet]
+        public ExecResult QueryRoomByID(int RoomID)
+        {
+            return _room.QueryRoomByID(RoomID);
         }
 
 

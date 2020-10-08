@@ -27,5 +27,6 @@ namespace IRepository.ICar
         ExecResult GetCarAnswer(int EmployeeID, int IsRandom);
 
         ExecResult QueryCarByRoomIDs(string RoomIDs);
+        ExecResult QueryCarByID(int CarID);
     }
 }

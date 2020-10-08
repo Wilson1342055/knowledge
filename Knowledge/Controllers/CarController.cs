@@ -87,5 +87,10 @@ namespace Knowledge.Controllers
         {
             return _car.QueryCarByRoomIDs(RoomIDs);
         }
+
+        public ExecResult QueryCarByID(int CarID)
+        {
+            return _car.QueryCarByID(CarID);
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace Repository.Floor
         public ExecResult AddFloor(FloorModel floor)
         {
             string strSql = $"insert into Floor(FloorName,FloorDesc,CreateUser,CreateTime,EmployeeID) values('{floor.FloorName}','{floor.FloorDesc}','{floor.CreateUser}','{floor.CreateTime}',1)";
-            int intResult = BestWoDP.DapperHelper.ExceSQL(strSql, BestWoDP.DapperHelper.DBConnection.LogHelper);
+            int intResult = BestWoDP.DapperHelper.ExceSQL(strSql, BestWoDP.DapperHelper.DBConnection.KnowledgeHelper);
             List<ExceDataResult> listResult = new List<ExceDataResult>();
             
             if(intResult>0)
@@ -37,7 +37,7 @@ namespace Repository.Floor
             foreach (string item in IDs.Split(','))
             {
                 string strSql = $"delete Floor where FloorID = {item}";
-                int intResult = BestWoDP.DapperHelper.ExceSQL(strSql, BestWoDP.DapperHelper.DBConnection.LogHelper);
+                int intResult = BestWoDP.DapperHelper.ExceSQL(strSql, BestWoDP.DapperHelper.DBConnection.KnowledgeHelper);
                 if (intResult > 0)
                 {
                     listResult.Add(new ExceDataResult { DocumentNo = item.ToString(), Success = true, Remark = "操作成功" });
@@ -52,7 +52,7 @@ namespace Repository.Floor
 
         public ExecResult QueryFloor(int EmployeeID)
         {
-            DataTable dt = DapperHelper.QueryGetDT("Floor with(nolock)", "*,FloorName 楼层", $"and EmployeeID={EmployeeID}", BestWoDP.DapperHelper.DBConnection.LogHelper);
+            DataTable dt = DapperHelper.QueryGetDT("Floor with(nolock)", "FloorID,FloorName 楼层,FloorDesc 描述,CreateUser 创建人,CreateTime 创建时间", $"and EmployeeID={EmployeeID}", BestWoDP.DapperHelper.DBConnection.KnowledgeHelper);
 
             return new ExecResult { StatusCode = 1, Message = "操作成功", DTData = dt };
         }

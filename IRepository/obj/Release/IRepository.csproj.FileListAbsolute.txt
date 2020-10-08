@@ -1,0 +1,11 @@
+D:\git\down2\knowledge\IRepository\bin\Release\IRepository.dll
+D:\git\down2\knowledge\IRepository\bin\Release\IRepository.pdb
+D:\git\down2\knowledge\IRepository\bin\Release\BestWoDP.dll
+D:\git\down2\knowledge\IRepository\bin\Release\Dapper.dll
+D:\git\down2\knowledge\IRepository\bin\Release\KnowledgeModel.dll
+D:\git\down2\knowledge\IRepository\bin\Release\KnowledgeModel.pdb
+D:\git\down2\knowledge\IRepository\obj\Release\IRepository.csprojAssemblyReference.cache
+D:\git\down2\knowledge\IRepository\obj\Release\IRepository.csproj.CoreCompileInputs.cache
+D:\git\down2\knowledge\IRepository\obj\Release\IRepository.csproj.CopyComplete
+D:\git\down2\knowledge\IRepository\obj\Release\IRepository.dll
+D:\git\down2\knowledge\IRepository\obj\Release\IRepository.pdb

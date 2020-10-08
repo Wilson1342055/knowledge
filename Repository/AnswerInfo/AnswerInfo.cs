@@ -17,7 +17,7 @@ namespace Repository.AnswerInfo
         public ExecResult AddAnswerInfo(AnswerInfoModel model)
         {
             string strSql = $"insert into AnswerInfo([CarID], [AnswerContent], [AnswerResult], [EmployeeID], [CreateUser], [CreateTime]) values('{model.CarID}','{model.AnswerContent}','{model.AnswerResult}','{model.EmployeeID}','{ model.CreateUser}','{model.CreateTime}')";
-            int intResult = BestWoDP.DapperHelper.ExceSQLReturnID(strSql, BestWoDP.DapperHelper.DBConnection.LogHelper);
+            int intResult = BestWoDP.DapperHelper.ExceSQLReturnID(strSql, BestWoDP.DapperHelper.DBConnection.KnowledgeHelper);
             List<ExceDataResult> listResult = new List<ExceDataResult>();
 
             if (intResult > 0)
@@ -34,7 +34,7 @@ namespace Repository.AnswerInfo
         public ExecResult UpdateAnswerInfo(AnswerInfoModel model)
         {
             string strSql = $"update AnswerInfo set [AnswerResult]='{model.AnswerResult}' where [AnswerInfoID]={model.AnswerInfoID}";
-            int intResult = BestWoDP.DapperHelper.ExceSQL(strSql, BestWoDP.DapperHelper.DBConnection.LogHelper);
+            int intResult = BestWoDP.DapperHelper.ExceSQL(strSql, BestWoDP.DapperHelper.DBConnection.KnowledgeHelper);
             List<ExceDataResult> listResult = new List<ExceDataResult>();
 
             if (intResult > 0)

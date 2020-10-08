@@ -8,6 +8,7 @@ namespace KnowledgeModel.Room
 {
     public class RoomModel
     {
+        public int RoomID { get; set; }
         public int FloorID { get; set; }
         public string RoomName { get; set; }
 

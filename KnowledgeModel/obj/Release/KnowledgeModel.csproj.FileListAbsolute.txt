@@ -1,0 +1,6 @@
+D:\git\down2\knowledge\KnowledgeModel\bin\Release\KnowledgeModel.dll
+D:\git\down2\knowledge\KnowledgeModel\bin\Release\KnowledgeModel.pdb
+D:\git\down2\knowledge\KnowledgeModel\obj\Release\KnowledgeModel.csprojAssemblyReference.cache
+D:\git\down2\knowledge\KnowledgeModel\obj\Release\KnowledgeModel.csproj.CoreCompileInputs.cache
+D:\git\down2\knowledge\KnowledgeModel\obj\Release\KnowledgeModel.dll
+D:\git\down2\knowledge\KnowledgeModel\obj\Release\KnowledgeModel.pdb
