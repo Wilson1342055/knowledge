@@ -95,12 +95,12 @@ namespace Repository.Car
         {
             DataTable dt = new DataTable();
             if (IsRandom == 1)
-                dt = DapperHelper.QueryGetDT("Car cr with(nolock) join Floor fr with(nolock) on cr.FloorID = fr.FloorID join Room rm with(nolock) on rm.RoomID = cr.RoomID", "top 1 cr.Points,cr.CarID,cr.[CarQuestion],cr.[CarAnswer],rm.RoomName,fr.FloorName", $"and cr.EmployeeID={EmployeeID} ORDER BY NEWID()", BestWoDP.DapperHelper.DBConnection.KnowledgeHelper);
+                dt = DapperHelper.QueryGetDT("Car cr with(nolock) join Floor fr with(nolock) on cr.FloorID = fr.FloorID join Room rm with(nolock) on rm.RoomID = cr.RoomID", "top 1 cr.Points,cr.CarID,cr.[CarQuestion],cr.[CarAnswer],rm.RoomName,fr.FloorName,cr.FloorID,cr.RoomID", $"and cr.EmployeeID={EmployeeID} ORDER BY NEWID()", BestWoDP.DapperHelper.DBConnection.KnowledgeHelper);
             else
-                dt = DapperHelper.QueryGetDT("Car cr with(nolock) join Floor fr with(nolock) on cr.FloorID = fr.FloorID join Room rm with(nolock) on rm.RoomID = cr.RoomID", "top 1 cr.Points,cr.CarID,cr.[CarQuestion],cr.[CarAnswer],rm.RoomName,fr.FloorName", $"and cr.EmployeeID={EmployeeID} and cr.Points<1 ORDER BY NEWID()", BestWoDP.DapperHelper.DBConnection.KnowledgeHelper);
+                dt = DapperHelper.QueryGetDT("Car cr with(nolock) join Floor fr with(nolock) on cr.FloorID = fr.FloorID join Room rm with(nolock) on rm.RoomID = cr.RoomID", "top 1 cr.Points,cr.CarID,cr.[CarQuestion],cr.[CarAnswer],rm.RoomName,fr.FloorName,cr.FloorID,cr.RoomID", $"and cr.EmployeeID={EmployeeID} and cr.Points<1 ORDER BY NEWID()", BestWoDP.DapperHelper.DBConnection.KnowledgeHelper);
             if (dt.Rows.Count == 0)
             {
-                dt = DapperHelper.QueryGetDT("Car cr with(nolock) join Floor fr with(nolock) on cr.FloorID = fr.FloorID join Room rm with(nolock) on rm.RoomID = cr.RoomID", "top 1 cr.Points,cr.CarID,cr.[CarQuestion],cr.[CarAnswer],rm.RoomName,fr.FloorName", $"and cr.EmployeeID={EmployeeID} ORDER BY NEWID()", BestWoDP.DapperHelper.DBConnection.KnowledgeHelper);
+                dt = DapperHelper.QueryGetDT("Car cr with(nolock) join Floor fr with(nolock) on cr.FloorID = fr.FloorID join Room rm with(nolock) on rm.RoomID = cr.RoomID", "top 1 cr.Points,cr.CarID,cr.[CarQuestion],cr.[CarAnswer],rm.RoomName,fr.FloorName,cr.FloorID,cr.RoomID", $"and cr.EmployeeID={EmployeeID} ORDER BY NEWID()", BestWoDP.DapperHelper.DBConnection.KnowledgeHelper);
             }
             return new ExecResult { StatusCode = 1, Message = "操作成功", DTData = dt };
         }
