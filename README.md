@@ -1,2 +1,2 @@
 # knowledge
-Wilson知识宫殿
+Wilson
